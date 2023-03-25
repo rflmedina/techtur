@@ -1,4 +1,5 @@
 import Header from "../../components/Header/Header.component";
+import ButtonSMore from "../../components/Button";
 // import Card from "../../components/Card/Card.component";
 
 import { BodyContainer, DivTextBuy, Card, CardText, Button, CardTextHours, CardTextCity, CardTextBussName, CardTextPrice, CardTextMessagePrice } from "./Home.styles";
@@ -79,6 +80,8 @@ const Home = () => (
                     </Col>
                 </Row>
             </Card>
+
+            <ButtonSMore></ButtonSMore>
 
         </BodyContainer>
     </>

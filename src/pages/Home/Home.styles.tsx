@@ -26,18 +26,17 @@ export const DivTextBuy = styled.div`
 `
 
 export const Card = styled.div`
-    background: #fff;
-    display: flex;
-    position: fixed;
-    margin-left: 10rem;
-    align-items: center;
-    top: 17rem;
-    width: 70rem;
-    height: 10rem;
-    border-radius: 15px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
+  display: flex;
+  justify-content: center; 
+  top: 17rem;
+  position: fixed;
+  left: 10rem;
+  right: 10rem;
+  width: 70rem;
+  height: 10rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
 export const CardText = styled.div`
