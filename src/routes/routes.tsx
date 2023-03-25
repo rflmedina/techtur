@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import Owner from '../pages/Owner/Owner.component';
 import Employed from '../pages/Owner/Employed';
 import Partner from '../pages/Partner/Partner.component';
+import TicketDetail from '../pages/Ticket/TIcket.component';
 
 const RoutesPath = () => {
   return (
@@ -12,6 +13,7 @@ const RoutesPath = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/ticket/*" element={<TicketDetail />} />
         <Route path="/owner" element={<Owner />} />
         <Route path="/owner/*" element={<Employed />} />
         <Route path="/partner" element={<Partner />} />

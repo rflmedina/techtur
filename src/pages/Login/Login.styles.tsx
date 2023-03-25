@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(0deg, rgba(185, 57, 217, 0.25), rgba(185, 57, 217, 0.25)), rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  /* background: linear-gradient(0deg, rgba(185, 57, 217, 0.25), rgba(185, 57, 217, 0.25)), rgba(0, 0, 0, 0.2);
+   */
+
+  background: #00B4D9;
 
   img {
     height: 600px;
@@ -29,19 +33,18 @@ export const Container = styled.div`
   }
 
   form {
-    display: flex;
-    align-self: flex-end;
+    position: absolute;
+    right: 10%;
+    align-self: center;
     flex-direction: column;
   }
 
 `;
 
 export const Form = styled.form`
-position: absolute;
+display: flex;
 width: 355px;
 height: 423px;
-left: 932px;
-top: 160px;
 align-items: center;
 justify-content: center;
 
@@ -60,6 +63,7 @@ export const Input = styled.input`
 box-sizing: border-box;
 width: 294px;
 height: 56px;
+padding-left: 20px;
 
 background: #F2F2F2;
 border: 1px solid #F7F7F7;
@@ -84,6 +88,6 @@ font-size: 24px;
 align-items: center;
 justify-content: center;
 
-background: #B939D9;
+background: #00B4D9;
 border-radius: 10px;
 `;
