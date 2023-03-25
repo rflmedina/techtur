@@ -46,27 +46,80 @@ export const CardText = styled.div`
     box-sizing: border-box;
     flex-direction: column;
     width: 100%;
+    color: #000;
+    
 
     div{
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
+        text-align: left;
         flex-direction: row;
+        margin-left: 5px;
     }
+
+    p{
+        margin: 0;
+        width: max-content;
+    }
+
+
 `
 
 export const Button = styled.div`
-    display: flex;
-    width: 8rem;
-    height: 2.5rem;
-    color: #ffff;
-    font-size: 17px;
+    display: block;
+    position: fixed;
+    flex-direction: row;
+    margin: 0px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    width: 7rem;
+    margin-right: 20px;
+    
+    p{
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-weight: bold;
+    }
+`
+
+export const CardTextHours = styled.div`
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+`
+
+export const CardTextCity = styled.div`
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+`
+
+export const CardTextBussName = styled.div`
+    font-size: 15px;
+    font-weight: bold;
+        align-items: center;
+    justify-content: center;
+    text-align: center;
+`
+
+export const CardTextPrice = styled.div`
+    font-size: 20px;
     font-weight: bold;
     align-items: center;
     justify-content: center;
-
-    background: #181818;
-    border-radius: 10px;
+    text-align: center;
 `
+export const CardTextMessagePrice = styled.div`
+    display: flex;
+
+    div{
+        display: block;
+        margin-top: 25px;
+    }
+
+`
+
 
