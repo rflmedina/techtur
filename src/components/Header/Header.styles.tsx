@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-    position: absolute;
+    position: fixed;
     display: flex;
     box-sizing: border-box;
     width: 100%;
