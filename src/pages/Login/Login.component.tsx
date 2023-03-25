@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Button, Container, Form, Input, Label, Title } from "./Login.styles";
 import Woman from '../../assets/images/woman.png'
+import { useNavigate } from 'react-router-dom'
 import { FaUser, FaLock } from 'react-icons/fa';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
   
     const handleUsernameChange = (e: any) => {
       setUsername(e.target.value);
@@ -31,19 +33,19 @@ const Login = () => {
           <Label>CPF ou CNPJ</Label>
           {/* <InputGroup> */}
           {/* <Icon> */}
-            <FaLock />
+            {/* <FaLock /> */}
           {/* </Icon> */}
           <Input type="text" placeholder="738.289.425-88" value={username} onChange={handleUsernameChange} />
           {/* </InputGroup> */}
           <Label>Senha</Label>
           {/* <InputGroup> */}
           {/* <Icon> */}
-            <FaLock />
+            {/* <FaLock /> */}
           {/* </Icon> */}
 
           <Input type="password" placeholder="*******" value={password} onChange={handlePasswordChange} />
           {/* </InputGroup> */}
-          <Button type="submit">Entrar</Button>
+          <Button type="submit" onClick={() => navigate('/owner')}>Entrar</Button>
         </Form>
       </Container>
     );
