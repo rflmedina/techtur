@@ -24,7 +24,7 @@ const Card = ({ avatar, name, id, status }: any) => {
           </p>
         </Status>
       </InfoContainer>
-      <Button type='button' onClick={() => navigate('owner/123')}>Editar</Button>
+      <Button type='button' onClick={() => navigate('/123')}>Editar</Button>
     </CardContainer >
   );
 };

@@ -1,3 +1,4 @@
+import Card from "../../components/Card";
 import Ticket from "../../components/Ticket/Ticket.component"
 import Layout from "../Layout";
 import { Container } from "./Ticket.styles";

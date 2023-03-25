@@ -45,7 +45,7 @@ const Login = () => {
 
           <Input type="password" placeholder="*******" value={password} onChange={handlePasswordChange} />
           {/* </InputGroup> */}
-          <Button type="submit" onClick={() => navigate('/owner')}>Entrar</Button>
+          <Button type="submit" onClick={() => navigate('/home')}>Entrar</Button>
         </Form>
       </Container>
     );
