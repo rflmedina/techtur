@@ -1,21 +1,34 @@
 import React from 'react';
 import Card from './components/Card.component';
 import Search from './components/search/Search.component';
-import { Container, Header } from './Owner.styles';
+import { Container, ContentHeader, Header, Button } from './Owner.styles';
 import { AiOutlineUser } from 'react-icons/ai';
+import Layout from '../Layout';
 
 const Owner = () => {
+
+    const data = [
+        { nome: 'João', id: 1, status: 'Ativo' },
+        { nome: 'Maria', id: 2, status: 'Inativo' },
+        { nome: 'Pedro', id: 3, status: 'Ativo' },
+        { nome: 'Ana', id: 4, status: 'Inativo' },
+    ];
+
+
     return (
-        <Container>
-           <Header>
-            <div style={{display: 'flex'}}>
-            <AiOutlineUser />
-            <h2>Funcionários</h2>
-            </div>
-            <Search />
-           </Header>
-            <Card />
-        </Container>
+        <Layout user="Rafaela Medina">
+            <Container>
+                <Header>
+                    <ContentHeader>
+                        <AiOutlineUser />
+                        <h2>Funcionários</h2>
+                    </ContentHeader>
+                    <Search />
+                </Header>
+                <Button>Novo Funcionário</Button>
+                <Card />
+            </Container>
+        </Layout>
     )
 }
 

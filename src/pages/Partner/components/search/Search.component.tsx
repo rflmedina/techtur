@@ -24,8 +24,8 @@ const SearchInput = styled.input`
 const Search = () => {
   return (
     <SearchContainer>
+      <SearchInput type="text" placeholder="Buscar funcionário" />
       <BiSearch/>
-      <SearchInput type="text" placeholder="Buscar empresa" />
     </SearchContainer>
   );
 };
