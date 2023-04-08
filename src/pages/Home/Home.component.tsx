@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from '../../components/Card';
 import Layout from '../../pages/Layout';
-import { Container } from './Home.styles';
+import { Container, TitleWrapper } from './Home.styles';
+import { BsFillCartFill, BsTicketPerforatedFill } from 'react-icons/bs';
 
 const Home = ({ user }: any) => {
   const userName = 'teste'
@@ -9,9 +10,10 @@ const Home = ({ user }: any) => {
   return (
     <Layout user={userName}>
      <Container>
-     <div>
+     <TitleWrapper>
+        <BsTicketPerforatedFill size={30} />
         <h2>Comprar passagens</h2>
-      </div>
+      </TitleWrapper>
       <Card
         timeOrigin="10:00"
         timeDestiny="12:00"
@@ -37,9 +39,10 @@ const Home = ({ user }: any) => {
         price="7,00"
       />
 
-      <div>
+      <TitleWrapper>
+        <BsFillCartFill size={30} />
         <h2>Histórico de compras</h2>
-      </div>
+      </TitleWrapper>
       <Card
         timeOrigin="10:00"
         timeDestiny="12:00"

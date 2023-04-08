@@ -18,7 +18,7 @@ export const Header = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    margin: 50px 0px;
+    margin: 50px 0px 0px;
     width: 50%;
     height: 100%;
 `
@@ -35,6 +35,15 @@ export const ContentHeader = styled.div`
     svg {
         height: 50px;
         width: 50px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 0px 20px 0px;
+        width: 100%;
+        text-align: center;
     }
 `
 

@@ -3,7 +3,7 @@ import { FaBus } from 'react-icons/fa';
 import { CardWrapper, DataWrapper, Value, Arrow,  CompanyWrapper, PriceWrapper, Button } from './Card.styles'
 
 
-const Card = ({ timeOrigin, timeDestiny, originCity, destinationCity, companyName, price }: any) => {
+const Card = ({ timeOrigin, timeDestiny, originCity, destinationCity, companyName, price, buttonText }: any) => {
     return (
         <CardWrapper>
             <DataWrapper>
@@ -25,7 +25,7 @@ const Card = ({ timeOrigin, timeDestiny, originCity, destinationCity, companyNam
                 <Value>Valor da passagem</Value>
                 <Value>R${price}</Value>
             </PriceWrapper>
-            <Button>Comprar</Button>
+            <Button>{buttonText ? buttonText : 'Comprar'}</Button>
         </CardWrapper>
     );
 };

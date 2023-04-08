@@ -7,9 +7,6 @@ export const Container = styled.div`
   height: 100vh;
   width: 100%;
   box-sizing: border-box;
-  /* background: linear-gradient(0deg, rgba(185, 57, 217, 0.25), rgba(185, 57, 217, 0.25)), rgba(0, 0, 0, 0.2);
-   */
-
   background: #00B4D9;
 
   img {
@@ -18,11 +15,44 @@ export const Container = styled.div`
     justify-self: end;
   }
 
+  img {
+    display: block;
+    height: 600px;
+    align-self: flex-end;
+    justify-self: end;
+  }
+
+  @media only screen and (max-width: 767px) {
+    img {
+      display: none;
+    }
+  }
+
+
   h2 {
     align-self: flex-start;
     justify-self: start;
     color: #FFFF;
     font-size: 48px;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      align-self: center;
+      position: absolute;
+      top: 10%;
+    }
+
+    form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    p {
+      display: none;
+    }
   }
 
   p {
@@ -63,7 +93,8 @@ export const Input = styled.input`
 box-sizing: border-box;
 width: 294px;
 height: 56px;
-padding-left: 20px;
+padding-left: 38px;
+
 
 background: #F2F2F2;
 border: 1px solid #F7F7F7;
@@ -79,15 +110,31 @@ export const Label = styled.label`
   `
 
 export const Button = styled.button`
-display: flex;
-width: 294px;
-height: 56px;
-margin-top: 50px;
-color: #ffff;
-font-size: 24px;
-align-items: center;
-justify-content: center;
+  display: flex;
+  width: 294px;
+  height: 56px;
+  margin-top: 50px;
+  color: #ffff;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #00B4D9;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+`;
 
-background: #00B4D9;
-border-radius: 10px;
+// Icon styles
+export const InputContainer = styled.div`
+  position: relative;
+`;
+
+export const Icon = styled.span`
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  padding: 10px;
+  transform: translateY(-50%);
+  color: #999898;
 `;

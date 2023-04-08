@@ -7,7 +7,11 @@ export const CardContainer = styled.div`
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  width: 50%;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
 `;
 
 export const Avatar = styled.div`
@@ -19,6 +23,13 @@ export const Avatar = styled.div`
   background-color: #D9D9D9;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
   svg {
     height: 50px;
@@ -29,10 +40,14 @@ export const Avatar = styled.div`
 
 export const InfoContainer = styled.div`
   display: flex;
-  width: 50%;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
   margin-left: 16px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 export const Name = styled.h2`
@@ -55,9 +70,8 @@ export const Status = styled.div`
   justify-content: center;
   word-wrap: break-word;
   height: 30px;
-  border-radius: 120px;
   font-size: 16px;
-  margin: 0;
+  margin: 0px 50px;
 
   span {
     color: #00FF19;

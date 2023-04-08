@@ -1,31 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Col, Container } from 'react-grid-system'
+import { Row, Col } from 'react-grid-system'
 import { InputWrapper } from "../Employed.styles";
-
-const UserFormContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
-
-const Label = styled.label`
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-`;
-
-const Input = styled.input`
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  padding: 10px;
-`;
+import { Button, Container, Input, Label } from "./UserForm.styles";
 
 const UserForm = () => {
   return (
-    <div>
+    <Container>
       <Row>
         <Col md={6}>
           <InputWrapper>
@@ -58,13 +39,13 @@ const UserForm = () => {
       </Row>
 
       <Row>
-        <Col>
+        <Col md={6}>
           <InputWrapper>
             <Label>Contato:</Label>
             <Input type="text" />
           </InputWrapper>
         </Col>
-        <Col>
+        <Col md={6}>
           <InputWrapper>
             <Label>Ônibus:</Label>
             <Input type="text" />
@@ -73,14 +54,14 @@ const UserForm = () => {
       </Row>
 
       <Row>
-        <Col>
+        <Col md={6}>
           <InputWrapper>
             <Label>Login:</Label>
             <Input type="text" />
           </InputWrapper>
         </Col>
 
-        <Col>
+        <Col md={6}>
           <InputWrapper>
             <Label>Senha:</Label>
             <Input type="password" />
@@ -88,11 +69,8 @@ const UserForm = () => {
         </Col>
       </Row>
 
-      <div>
-        <button>Cancelar</button>
-        <button>Salvar</button>
-      </div>
-    </div>
+      <Button>Salvar alterações</Button>
+    </Container>
   );
 };
 

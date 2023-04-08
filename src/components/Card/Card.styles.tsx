@@ -6,7 +6,8 @@ export const CardWrapper = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  max-width: 600px;
   height: 135px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -15,22 +16,46 @@ export const CardWrapper = styled.div`
   box-sizing: border-box;
   font-family: sans-serif;
   color: #333333;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+  }
 `;
 
 export const Value = styled.span`
   font-size: 14px;
   margin-right: 10px;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
 `;
+
+
 
 export const Arrow = styled.span`
   font-size: 20px;
   margin: 0 10px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const CompanyIcon = styled.img`
   width: 18px;
   height: 18px;
   margin-right: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 14px;
+    height: 14px;
+  }
 `;
 
 export const Button = styled.button`
@@ -48,40 +73,60 @@ export const Button = styled.button`
     color: black;
     border: 2px solid black;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
 `;
 
 export const DataWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-    span {
-        font-size: 16px;
-        padding: 10px;
-        font-weight: bold;
-        color: #00B4D9;
-    }
+  span {
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+    color: #00B4D9;
 
-    P {
-        font-size: 12px;
-        margin: 0;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      padding: 5px;
     }
-    `
+  }
+
+  p {
+    font-size: 12px;
+    margin: 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: 10px;
+    }
+  }
+`;
 
 export const CompanyWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    span { 
-        margin-left: 5px;
-    }
-`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  span {
+    margin-left: 5px;
+  }
+`;
 
 export const PriceWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    span {
-        margin: 5px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  span {
+    margin: 5px 0;
+
+    @media screen and (max-width: 768px) {
+      margin: 2px 10px;
     }
-    `
+  }
+`;
