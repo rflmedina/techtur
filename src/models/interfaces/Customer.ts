@@ -1,4 +1,4 @@
-// Revisar conteúdos necessários para output
+// Revisar dados necessários para output
 
 import PermissionLevelEnum from '../enums/PermissionLevel'
 
