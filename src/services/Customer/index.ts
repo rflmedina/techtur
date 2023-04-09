@@ -7,4 +7,8 @@ const login = (logininfo: LoginInterface) =>
   api.post<CustomerInterfaceOutputDTO>(`${path}`, logininfo)
     .then((response) => response.data)
 
-export { login }
+const buyTicket = (customerId: number, travelId: number) =>
+  api.post(`${path}/${customerId}/tickets/${travelId}`)
+    .then((response) => response.data)
+
+export { login, buyTicket }
