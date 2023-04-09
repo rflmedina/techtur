@@ -1,0 +1,15 @@
+POST http://localhost:8080/travel-company/1/travels
+Content-Type: application/json
+
+{
+  "busID": 1,
+  "price": 1,
+  "departure": {
+    "cityID": 2,
+    "time": "2024-04-02T00:00:00"
+  },
+  "arrival": {
+    "cityID": 1,
+    "time": "2024-10-02T00:00:00"
+  },
+}
