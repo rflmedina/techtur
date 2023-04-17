@@ -27,7 +27,7 @@ const Login = () => {
       <h2>nuvora</h2>
       <p>a tecnologia <br /> é o que nos <br /> move.</p>
 
-      <img src={Woman} />
+      <img src={Woman} alt="mulher segurando celular"/>
 
       <Form onSubmit={handleLogin}>
         <Label>Email</Label>
