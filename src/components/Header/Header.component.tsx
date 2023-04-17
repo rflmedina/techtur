@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -36,7 +37,6 @@ const DropdownMenu = styled.div<{ open: boolean }>`
   right: 0;
   z-index: 1;
   background-color: white;
-  border: 1px solid #b939d9;
   border-radius: 0.25rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 0.5rem;
@@ -46,7 +46,6 @@ const DropdownMenu = styled.div<{ open: boolean }>`
 const DropdownMenuItem = styled.button`
   background-color: transparent;
   border: none;
-  color: #b939d9;
   font-size: 1rem;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
@@ -56,6 +55,7 @@ const DropdownMenuItem = styled.button`
 
 const Header = ({ name }: any) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleDropdownToggle = () => {
     setDropdownOpen(!dropdownOpen);
@@ -63,7 +63,7 @@ const Header = ({ name }: any) => {
 
   const handleLogout = () => {
     setDropdownOpen(false);
-    // implement logout logic here
+    navigate("/")
   };
 
   return (

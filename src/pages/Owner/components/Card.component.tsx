@@ -8,7 +8,8 @@ const Card = ({ avatar, name, id, status }: any) => {
   const navigate = useNavigate();
 
   return (
-    <CardContainer>
+    <>
+        <CardContainer>
       <Avatar>
         <AiOutlineUser />
       </Avatar>
@@ -24,8 +25,28 @@ const Card = ({ avatar, name, id, status }: any) => {
           </p>
         </Status>
       </InfoContainer>
-      <Button type='button' onClick={() => navigate('/123')}>Editar</Button>
+      <Button type='button' onClick={() => navigate('owner/123')}>Editar</Button>
     </CardContainer >
+
+    <CardContainer style={{marginTop: 20}}>
+    <Avatar>
+      <AiOutlineUser />
+    </Avatar>
+    <InfoContainer>
+      <div>
+        <Name>Mirella Luana da Mota</Name>
+        <Id>ID: 564528</Id>
+      </div>
+      <Status>
+        <p>Pagamento
+          <br />
+          <span>em andamento</span>
+        </p>
+      </Status>
+    </InfoContainer>
+    <Button type='button' onClick={() => navigate('owner/123')}>Editar</Button>
+    </CardContainer >
+    </>
   );
 };
 

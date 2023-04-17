@@ -12,7 +12,7 @@ const Employed = () => {
                 <Header>
                     <ContentHeader>
                         <AiOutlineUser />
-                        <h2>Rafael Eduardo de Moura</h2>
+                        <h2>Rafael Moura</h2>
                     </ContentHeader>
                 </Header>
 

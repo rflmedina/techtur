@@ -22,6 +22,22 @@ const Login = () => {
     // handle login logic
   };
 
+  const navigateTo = (username: string) => {
+    console.log(username)
+
+    if (username === 'admin@nuvora.com') {
+      navigate('/owner')
+      return
+    }
+
+    if (username === 'bus@nuvora.com') {
+      navigate('/partner')
+      return
+    }
+
+    navigate('/home')
+  }
+
   return (
     <Container>
       <h2>nuvora</h2>
@@ -42,7 +58,7 @@ const Login = () => {
           <Icon><FaLock /></Icon>
         </InputContainer>
 
-        <Button type="submit" onClick={() => navigate('/home')}>Entrar</Button>
+        <Button type="submit" onClick={() => navigateTo(username)}>Entrar</Button>
 
       </Form>
     </Container>
